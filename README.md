@@ -48,7 +48,8 @@ OutPath                输出文件
 
 #### 2.
 也可配合JMG等其他内存马工具实现内存马注入
-<img width="992" alt="image" src="https://github.com/bcvgh/deserialization_payload_generator/assets/56790427/9970a15c-ce0e-4bd9-99cb-e8dcd9a14cef">
+<img width="996" alt="image" src="https://github.com/bcvgh/deserialization_payload_generator/assets/56790427/62a7157e-e127-43ea-be51-6bd8de526407">
+
 <img width="997" alt="image" src="https://github.com/bcvgh/deserialization_payload_generator/assets/56790427/1a9c935b-b12b-4b35-a5d7-37834f695eff">
 
 <img width="1288" alt="image" src="https://github.com/bcvgh/deserialization_payload_generator/assets/56790427/89fa1693-55d0-4326-ae29-c169cba685ae">
