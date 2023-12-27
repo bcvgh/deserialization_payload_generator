@@ -71,3 +71,5 @@ https://gv7.me/articles/2021/construct-java-detection-class-deserialization-gadg
 https://su18.org/post/ysoserial-su18-3
 
 https://goodapple.top/archives/1749
+
+https://mp.weixin.qq.com/s/IwhoVrdlxdfVTl-yuiaCPg
