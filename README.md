@@ -8,7 +8,7 @@
 ### 目前支持的Gadget
 `"URLDNS","CC1","CC2","CC3","CC4","CC5","CC6","CC7","CC8","CC9","CC11","CCK1","CCK2","CCK3","CCK4","CB1","CB1_183","Hibernate1","Hibernate2","C3P0URLClassLoader","C3P0ELInject","URLDNS","JRMPListener","JRMPClient"`
 
-（以上Gadget构造脸均来自互联网的大师傅们分享）
+（以上Gadget利用链均来自互联网的大师傅们分享）
 
 另外项目也加入了一些特定系统的反序列化漏洞Gadget，如Hibernate_fr
 
