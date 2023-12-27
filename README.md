@@ -56,3 +56,13 @@ OutPath                输出文件
 
 ### 其他
 诸如针对TemplatesImpl对象的payload缩小技术、脏字符填充等功能，由于实战经验不足，不确定其实际效果暂时没有添加。如果有师傅有这方面的需求，后续可以添加（最好能再指点我）
+
+### 参考引用
+https://github.com/woodpecker-framework/ysoserial-for-woodpecker
+https://github.com/Y4er/ysoserial
+https://github.com/frohoff/ysoserial
+
+p牛 java安全漫谈系列
+https://gv7.me/articles/2021/construct-java-detection-class-deserialization-gadget/
+https://su18.org/post/ysoserial-su18-3
+https://goodapple.top/archives/1749
