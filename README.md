@@ -53,6 +53,6 @@ OutPath                输出文件
 <img width="692" alt="image" src="https://github.com/bcvgh/deserialization_payload_generator/assets/56790427/d5d355a8-321b-4547-ae25-88a96f2c7f4b">
 
 ### 其他
-项目不定期更新，如果师傅们有其他Gadget需求可下载源码先自行添加。（自我感觉应该相比yso更简单，即使是小白也能复制粘贴实现）
+项目不定期更新，如果师傅们有其他Gadget需求可下载源码先自行添加。（自我感觉应该相比yso更简单，即使是小白也能复制粘贴实现:joy_cat:）
 
 诸如针对TemplatesImpl对象的payload缩小技术、脏字符填充等功能，由于实战经验不足，不确定其实际效果暂时没有添加。如果有师傅有这方面的需求，后续可以添加（最好能再指点我）
