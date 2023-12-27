@@ -42,7 +42,7 @@ OutPath                输出文件
 ### 使用简述
 #### 1.
 设置参数生成payload后输出到指定文件后，burp paste from file即可（切勿直接复制粘贴）
-<img width="992" alt="image" src="https://github.com/bcvgh/deserialization_payload_generator/assets/56790427/8e5d0f39-70aa-4473-a271-f412cd967e5b">
+<img width="995" alt="image" src="https://github.com/bcvgh/deserialization_payload_generator/assets/56790427/008cbdbd-8e26-451c-8ea0-5d9996be85db">
 
 <img width="1189" alt="image" src="https://github.com/bcvgh/deserialization_payload_generator/assets/56790427/41af914a-3867-4aa9-9818-50644e38d343">
 
