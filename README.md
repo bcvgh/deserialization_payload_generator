@@ -40,8 +40,10 @@ OutPath                输出文件
 ```
 
 ### 使用简述
+部分burp版本可能存在burp paste from file的数据流仍不能被服务器端正确反序列化，可以使用项目中的req.py脚本代替发包（这里需要将payload输出格式设置为Base64，复制粘贴到脚本即可）
+<img width="1002" alt="image" src="https://github.com/bcvgh/deserialization_payload_generator/assets/56790427/bbbd12f5-4792-4137-90ad-a04aec19a691">
 #### 1.
-设置参数生成payload后输出到指定文件后，burp paste from file即可（切勿直接复制粘贴）
+正常情况下设置参数生成payload后输出到指定文件后，burp paste from file即可（切勿直接复制粘贴）
 <img width="995" alt="image" src="https://github.com/bcvgh/deserialization_payload_generator/assets/56790427/008cbdbd-8e26-451c-8ea0-5d9996be85db">
 
 <img width="1189" alt="image" src="https://github.com/bcvgh/deserialization_payload_generator/assets/56790427/41af914a-3867-4aa9-9818-50644e38d343">
