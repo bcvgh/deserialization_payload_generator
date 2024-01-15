@@ -41,8 +41,8 @@ public class Payload {
     }
 
 
-    public byte[] PayloadGenerate(String methods ,String tag ,byte[] payloadObject){
-        byte[] bytes = (byte[]) payloadObject;
+    public Object PayloadGenerate(String methods ,String tag ,byte[] payloadObject){
+        Object object =  payloadObject;
         Class clz = null;
         try {
             clz = Class.forName("me.gv7.woodpecker.plugin.utils."+tag+"Util");
@@ -56,13 +56,13 @@ public class Payload {
             e.printStackTrace();
         }
         try {
-            bytes = (byte[]) method.invoke(null,bytes);
+            object = method.invoke(null,object);
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         } catch (InvocationTargetException e) {
             e.printStackTrace();
         }
-        return bytes;
+        return object;
     }
 
 //    public <T> T EncodePayloadGenerate(String encode){

@@ -111,6 +111,7 @@ public class DeserializationPayloadGenerate implements IHelperPlugin {
             IArg args3 = DeserializationPayloadGenerate.pluginHelper.createArg();
             List<String> encodeList = new ArrayList<String>(){{
                 add("Base64");
+                add("Hex");
             }};
             args3.setName("Encode");
             args3.setEnumValue(encodeList);
@@ -222,24 +223,28 @@ public class DeserializationPayloadGenerate implements IHelperPlugin {
 
 
                 Object object = payload.GadgetPayloadGenerate(input);
-                byte[] objectPayload = ObjectPayload.getSerialBytes(object);
+                Object objectPayload = ObjectPayload.getSerialBytes(object);
                 if (input.getResourcePath()!=null){
                     iResultOutput.rawPrintln("当前读取class文件路径为：" + input.getResourcePath());
                 }
                 if (input.getZip()!=null){
-                    objectPayload = payload.PayloadGenerate(input.getZip(),"Zip" ,objectPayload);
+                    objectPayload = payload.PayloadGenerate(input.getZip(),"Zip" , (byte[]) objectPayload);
                 }
                 if (input.getEncode()!=null){
-                    objectPayload = payload.PayloadGenerate(input.getEncode(),"Encode" ,objectPayload);
+                    objectPayload = payload.PayloadGenerate(input.getEncode(),"Encode" , (byte[]) objectPayload);
                 }
                 if (input.getOutput()!=null){
                     payload.PayloadOutPut(input.getOutput(),objectPayload);
                 }
-                iResultOutput.infoPrintln("因为直接生成的payload为字节数组，直接复制粘贴会导致反序列化失败，最好使用output参数将数据流输出到文件中。(payload经过编码则无此问题）");
+                iResultOutput.infoPrintln("因为直接生成的payload为字节数组，直接复制粘贴会导致反序列化失败，最好使用OutPath参数将数据流输出到文件中。(payload经过编码则无此问题）");
                 iResultOutput.successPrintln("当前利用链需要的依赖:"+ AnnotationUtils.getAnnotationValue(payload.gadgetClass,DependenciesVersion.class,"value"));
                 iResultOutput.successPrintln("利用链描述:"+ AnnotationUtils.getAnnotationValue(payload.gadgetClass, Description.class,"value"));
                 iResultOutput.successPrintln("生成的payload:");
-                iResultOutput.rawPrintln("\n" +new String(objectPayload) + "\n");
+                if (objectPayload instanceof String){
+                    iResultOutput.rawPrintln("\n" +(String) objectPayload + "\n");
+                }else {
+                    iResultOutput.rawPrintln("\n" +new String((byte[]) objectPayload) + "\n");
+                }
                 if (input.getOutput()!=null){
                     iResultOutput.successPrintln("payload已写入"+input.getOutput());
                 }
