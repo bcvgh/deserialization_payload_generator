@@ -68,6 +68,8 @@ public class DeserializationPayloadGenerate implements IHelperPlugin {
                 add("URLDNS");
                 add("JRMPListener");
                 add("JRMPClient");
+                add("Jackson_fr");
+                add("CC3_tw");
             }};
 //            gadgetList.add("URLDNS");
 //            gadgetList.add("CC1");

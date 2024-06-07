@@ -1,0 +1,52 @@
+<assembly>
+
+    <id>with-dependence</id><!-- 配置文件的标识，同时生成的jar包名字会把这个文本包含进去 -->
+
+    <formats>
+
+        <format>jar</format><!-- 打包类型，此处为jar -->
+
+    </formats>
+
+    <includeBaseDirectory>false</includeBaseDirectory>
+
+    <dependencySets>
+
+        <dependencySet>
+
+            <outputDirectory>/</outputDirectory>
+
+            <!--需要解包后才可以使用java执行-->
+
+            <unpack>true</unpack>
+
+        </dependencySet>
+
+        <!--添加作用域为system中的jar文件，和pom文件中引入的本地依赖对应-->
+
+        <dependencySet>
+
+            <outputDirectory>/</outputDirectory>
+
+            <unpack>true</unpack>
+
+            <scope>system</scope>
+
+        </dependencySet>
+
+    </dependencySets>
+    <!--使用的assembly.xml文件自定义打包-->
+
+<!--    <fileSets>-->
+
+<!--        <fileSet>-->
+
+<!--            <directory>${project.build.outputDirectory}</directory>-->
+
+<!--            <outputDirectory>/</outputDirectory>-->
+
+<!--        </fileSet>-->
+
+<!--    </fileSets>-->
+
+</assembly>
