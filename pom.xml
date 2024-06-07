@@ -30,9 +30,19 @@
         <artifactId>maven-assembly-plugin</artifactId>
         <version>3.3.0</version>
         <configuration>
-          <descriptorRefs>
-            <descriptorRef>jar-with-dependencies</descriptorRef>
-          </descriptorRefs>
+          <archive>
+            <manifest>
+              <mainClass>com.bcvgh.Main</mainClass>
+            </manifest>
+            <!-- 添加本地的jar -->
+            <!--                            <manifestEntries>-->
+            <!--                                &lt;!&ndash;多个包用空格隔开就可以了 &ndash;&gt;-->
+            <!--                                <Class-Path>lib/fine-third-10.0.jar</Class-Path>-->
+            <!--                            </manifestEntries>-->
+          </archive>
+          <descriptors>
+            <descriptor>src/main/resources/assembly.xml</descriptor>
+          </descriptors>
         </configuration>
         <executions>
           <execution>
@@ -84,16 +94,37 @@
 <!--    </dependency>-->
 
     <dependency>
+      <groupId>com.fr.third</groupId>
+      <artifactId>fr-third</artifactId>
+      <version>1.0.0</version>
+      <scope>system</scope>
+      <systemPath>${pom.basedir}/lib/fine-third-10.0.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>com.fr.core</groupId>
+      <artifactId>fr-core</artifactId>
+      <version>1.0.0</version>
+      <scope>system</scope>
+      <systemPath>${pom.basedir}/lib/fine-core-10.0.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>com.tongweb.commons.collections</groupId>
+      <artifactId>fr-cc</artifactId>
+      <version>1.0.0</version>
+      <scope>system</scope>
+      <systemPath>${pom.basedir}/lib/tongweb-collections.jar</systemPath>
+    </dependency>
+    <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-core</artifactId>
       <version>4.3.11.Final</version>
     </dependency>
 
-    <dependency>
-      <groupId>com.fr.third</groupId>
-      <artifactId>bcvgh</artifactId>
-      <version>1.0</version>
-    </dependency>
+<!--    <dependency>-->
+<!--      <groupId>com.fr.third</groupId>-->
+<!--      <artifactId>bcvgh</artifactId>-->
+<!--      <version>1.0</version>-->
+<!--    </dependency>-->
     <dependency>
       <groupId>com.nqzero</groupId>
       <artifactId>permit-reflect</artifactId>
